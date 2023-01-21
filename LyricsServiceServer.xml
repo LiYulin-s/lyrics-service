@@ -1,0 +1,13 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.lyrics.service">
+    <property name="lyrics" type="as" access="read"/>
+    <property name="translatedLyrics" type="as" access="read"/>
+    <property name="currentLyric" type="s" access="read"/>
+    <property name="currentTranslatedLyric" type="s" access="read"/>
+    <property name="index" type="n" access="read"/>
+    <property name="hasTranslation" type="b" access="read"/>
+    <method name="quit">
+    </method>
+  </interface>
+</node>
