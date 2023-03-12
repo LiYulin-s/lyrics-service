@@ -7,7 +7,7 @@
 #include <QSettings>
 
 #include "AbstractInterface.h"
-#include "DBusServiceServer.h"
+#include "DBusService.h"
 
 #define SERVICE_NAME "org.lyrics.service"
 
@@ -22,7 +22,7 @@ class MainApplication : public QObject
   private:
     QSettings *m_settings;
     AbstractInterface *m_interface;
-    DBusServiceServer *m_service_server;
+    DBusService *m_service_server;
 
   signals:
 };

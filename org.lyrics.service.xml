@@ -1,23 +1,29 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
-  <interface name="org.lyrics.service">
-    <property name="lyrics" type="as" access="read" />
-    <property name="translatedLyrics" type="as" access="read" />
-    <property name="currentLyric" type="s" access="read" />
-    <property name="currentTranslatedLyric" type="s" access="read" />
-    <property name="index" type="n" access="read" />
-    <property name="hasTranslation" type="b" access="read" />
-    <signal name="songChanged">
-      <arg name="has_translation" type="b" direction="out" />
-      <arg name="lyrics" type="as" direction="out" />
-      <arg name="translated_lyrics" type="as" direction="out" />
+  <interface name="local.DBusService">
+    <property name="title" type="s" access="readwrite"/>
+    <property name="lyrics" type="as" access="readwrite"/>
+    <property name="translatedLyrics" type="as" access="readwrite"/>
+    <property name="currentLine" type="s" access="readwrite"/>
+    <property name="translatedLine" type="s" access="readwrite"/>
+    <property name="index" type="n" access="readwrite"/>
+    <signal name="titleChanged">
+      <arg type="s" direction="out"/>
     </signal>
-    <signal name="lyricChanged">
-      <arg name="index" type="n" direction="out" />
-      <arg name="lyric" type="s" direction="out" />
-      <arg name="translated_lyric" type="s" direction="out" />
+    <signal name="lyricsChanged">
+      <arg type="as" direction="out"/>
     </signal>
-    <method name="quit">
-    </method>
+    <signal name="translatedLyricsChanged">
+      <arg type="as" direction="out"/>
+    </signal>
+    <signal name="currentLineChanged">
+      <arg type="s" direction="out"/>
+    </signal>
+    <signal name="translatedLineChanged">
+      <arg type="s" direction="out"/>
+    </signal>
+    <signal name="indexChanged">
+      <arg type="n" direction="out"/>
+    </signal>
   </interface>
 </node>

@@ -20,8 +20,8 @@ add_executable(lyrics-service
   AbstractInterface.h
   DBuseServiceAdaptor.h
   DBuseServiceAdaptor.cpp
-  DBusServiceServer.h
-  DBusServiceServer.cpp
+  DBusService.h
+  DBusService.cpp
   main.cpp
 )
 
